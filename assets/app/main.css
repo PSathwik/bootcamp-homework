@@ -33,14 +33,18 @@ header > .container {
 	margin:0px 5px 0px 0px;
 }
 
-.password label {
+.password label, .user label {
 	display: inline;
 	float: left;
 }
 
-.password a {
+.password a, .user i {
 	display: inline;
 	float: right;
+}
+
+.user i{
+ font-size:16px;
 }
 
 .signIn {
