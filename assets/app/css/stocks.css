@@ -1,0 +1,30 @@
+.search {
+	width: 300px;
+	margin: 0px auto;
+}
+
+.search input {
+	width: 100%;
+}
+
+.search div {
+	text-align: right;
+}
+
+.search button {
+	margin-right: 0px;
+}
+
+table {
+	margin-top: 20px;
+}
+
+tr {
+	text-align: center;
+}
+
+th, td {
+	border-width: 1px;
+	border-color: #d5d5d6;
+	border-style: solid;
+}
