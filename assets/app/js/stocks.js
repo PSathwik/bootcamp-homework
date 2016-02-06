@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$('selectr').selectr({
+	$('.selectr').selectr({
 		filter: false,
 		footer: false
 	});
