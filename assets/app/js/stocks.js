@@ -1,9 +1,4 @@
 $(document).ready(function(){
-	$('.selectr').selectr({
-		filter: false,
-		footer: false
-	});
-	
 	$('#stockInput').on('keypress', function(key) {
 		if(key.keyCode === 13) {
 			$('.primary').click();
