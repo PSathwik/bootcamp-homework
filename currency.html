@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="./assets/css/lunalite.css" type="text/css" >
         <link rel="stylesheet" href="./assets/crux/css/widgets.css" type="text/css" />
         <link rel="stylesheet" href="./assets/app/css/currency.css" type="text/css" />
+        <!-- Nothig wrong in placing it here howvere it would be better if it is placed inside body as it is a template -->
         <script id="data-currency-template" type="text/x-handlebars-template">
         	<option>{{id}}</option>
         </script>
@@ -39,6 +40,8 @@
 		
 			<div class="center">
 				<div>
+					<!-- Why are you using span inside a div then using another div inside it ? 
+					A lot of unnecessary DOM elements are bing added -->
 					<span>
 						<div class="col4">
 							<select id="currency">

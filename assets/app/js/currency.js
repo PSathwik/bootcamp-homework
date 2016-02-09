@@ -23,6 +23,7 @@ var onSelect = function (e, data){
 	
 	amount = $('#amount').val();
 	
+	// passing the ajax arguments in this format is absolutely great but it is not easy to understand what is happening
 	clearId = setTimeout(
 		$.ajax,
 		500,
@@ -33,6 +34,7 @@ var onSelect = function (e, data){
 				'X-Mashape-Key': 'Bs5BvTwMeNmshIVgyxatfWRfPMkNp1Dmi30jsnLUNZ8zyDyBW8'
 			},
 			success: function(data) {
+				// DOM caching would make it faster
 				$('#calcAmount').val(data.to_amount);
 			}
 		});
@@ -51,6 +53,13 @@ $(document).ready(function(){
 
 			var parent1 = $('#currency');
 			var parent2 = $('#counterCurrency');
+
+			// loopIndex is being declared as  a window variable that is not advisable
+			// Please do recollect the way I suggested you to write loops
+			// 1. cache the aray length and use the cched variable
+			// 2. use the standard i++ not ++i (convention only)
+			// 3. donot declare  variables or functions inside the function loop scope
+			//    declare the variab le outside, only assign it inside the loop
 			for(loopIndex = 0; loopIndex < data.length; ++loopIndex) {
 				var element = template(data[loopIndex]);
 				parent1.append(element);
